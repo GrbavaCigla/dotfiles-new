@@ -1,0 +1,128 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Any items in the `env` entry below will be added as
+# environment variables. Some entries may override variables
+# set by alacritty itself.
+env:
+  # TERM variable
+  #
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 6
+    y: 6
+  
+    #dynamic_padding: true
+
+  title: Alacritty
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+  #gtk_theme_variant: None
+
+scrolling:
+  history: 5000
+
+font:
+  normal:
+    family: Hack
+    style: Regular
+
+  bold:
+    family: Hack
+    style: Bold
+
+  italic:
+    family: Hack
+    style: Italic
+
+  bold_italic:
+    family: Hack
+    style: Bold Italic
+
+  size: 10.0
+
+  offset:
+    x: 1
+    y: 1
+
+  use_thin_strokes: true
+
+
+# Colors (Tomorrow Night Bright)
+#colors:
+#  # Default colors
+#  primary:
+#    background: '0x292d3e'
+#    foreground: '0xbbc5ff'
+#
+#  selection:
+#    text: '0x292d3e'
+#    background: '0xbbc5ff'
+#
+#  normal:
+#    black:   '0x292d3e'
+#    red:     '0xf07178'
+#    green:   '0xc3e88d'
+#    yellow:  '0xffcb6b'
+#    blue:    '0x82aaff'
+#    magenta: '0xc792ea'
+#    cyan:    '0x89ddff'
+#    white:   '0xd0d0d0'
+#
+#  bright:
+#    black:   '0x434758'
+#    red:     '0xff8b92'
+#    green:   '0xddffa7'
+#    yellow:  '0xffe585'
+#    blue:    '0x9cc4ff'
+#    magenta: '0xe1acff'
+#    cyan:    '0xa3f7ff'
+#    white:   '0xffffff'
+
+
+background_opacity: 0.8
+
+
+cursor:
+  style: Underline
+
+shell:
+  program: /bin/fish
+  args:
+    - --login
+    - --init-command
+    - "cat ~/.cache/wal/sequences"
+
+mouse:
+  hide_when_typing: false
+
+  url:
+    launcher:
+      program: xdg-open
+
+key_bindings:
+    # (Windows, Linux, and BSD only)
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  - { key: Add,      mods: Control,       action: IncreaseFontSize }
+  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+
+  - { key: Paste,                    action: Paste                            }
+  - { key: Copy,                     action: Copy                             }
+  - { key: L,         mods: Control, action: ClearLogNotice                   }
+  - { key: L,         mods: Control, chars: "\x0c"                            }
+  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
