@@ -1,0 +1,32 @@
+[global]
+    follow = mouse
+    indicate_hidden = true
+    geometry = 320x5+1582+69
+    notification_height = 100
+    transparency = 30
+    padding = 10
+    horizontal_padding = 10
+    font = "Iosevka 11"
+    markup = full
+    ignore_newline = true
+    icon_position=left
+    max_icon_size = 48
+    min_icon_size = 48
+    corner_radius = 16
+    mouse_left = do_action
+    mouse_right = close_current
+    middle = close_all
+    separator_height = 2
+    word_wrap = true
+
+[urgency_low]
+    background = "#18140d"
+    foreground = "#d0c9be"
+
+[urgency_normal]
+    background = "#18140d"
+    foreground = "#d0c9be"
+
+[urgency_critical]
+    background = "#18140d"
+    foreground = "#d0c9be"

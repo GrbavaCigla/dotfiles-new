@@ -25,8 +25,12 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-feh --bg-scale ~/.wallpapers/zajecarac.png
+~/.fehbg &
+unclutter &
+parcelite &
 picom &
 dwmblocks &
 wal -R &
+dunst &
+redshift &
 exec dwm
