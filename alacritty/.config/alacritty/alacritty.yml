@@ -12,6 +12,33 @@ env:
   # available, otherwise `xterm-256color` is used.
   TERM: xterm-256color
 
+
+colors:
+  primary:
+    background: '0x18140d'
+    foreground: '0xd0c9be'
+  cursor:
+    text:       '0x18140d'
+    cursor:     '0xd0c9be'
+  normal:
+    black:      '0x18140d'
+    red:        '0x929F25'
+    green:      '0xAAB234'
+    yellow:     '0xA9AB4F'
+    blue:       '0x97886B'
+    magenta:    '0xA79274'
+    cyan:       '0xBCC14E'
+    white:      '0xd0c9be'
+  bright:
+    black:      '0x918c85'
+    red:        '0x929F25'
+    green:      '0xAAB234'
+    yellow:     '0xA9AB4F'
+    blue:       '0x97886B'
+    magenta:    '0xA79274'
+    cyan:       '0xBCC14E'
+    white:      '0xd0c9be'
+
 window:
   padding:
     x: 6
@@ -54,39 +81,6 @@ font:
 
   use_thin_strokes: true
 
-
-# Colors (Tomorrow Night Bright)
-#colors:
-#  # Default colors
-#  primary:
-#    background: '0x292d3e'
-#    foreground: '0xbbc5ff'
-#
-#  selection:
-#    text: '0x292d3e'
-#    background: '0xbbc5ff'
-#
-#  normal:
-#    black:   '0x292d3e'
-#    red:     '0xf07178'
-#    green:   '0xc3e88d'
-#    yellow:  '0xffcb6b'
-#    blue:    '0x82aaff'
-#    magenta: '0xc792ea'
-#    cyan:    '0x89ddff'
-#    white:   '0xd0d0d0'
-#
-#  bright:
-#    black:   '0x434758'
-#    red:     '0xff8b92'
-#    green:   '0xddffa7'
-#    yellow:  '0xffe585'
-#    blue:    '0x9cc4ff'
-#    magenta: '0xe1acff'
-#    cyan:    '0xa3f7ff'
-#    white:   '0xffffff'
-
-
 background_opacity: 0.8
 
 
@@ -95,10 +89,10 @@ cursor:
 
 shell:
   program: /bin/fish
-  args:
-    - --login
-    - --init-command
-    - "cat ~/.cache/wal/sequences"
+    #  args:
+    #    - --login
+    #    - --init-command
+    #    - "cat ~/.cache/wal/sequences"
 
 mouse:
   hide_when_typing: false
@@ -126,3 +120,7 @@ key_bindings:
   - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
   - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
   - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
+# BEGIN ACE
+
+
+# END ACE
