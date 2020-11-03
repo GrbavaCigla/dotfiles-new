@@ -1,4 +1,5 @@
 syntax on
+set mouse=a
 set autoread
 set autoindent
 set belloff=all
@@ -15,7 +16,7 @@ set lazyredraw
 set magic
 set nocompatible
 set nowrap
-set number
+set relativenumber
 set ruler
 set shiftwidth=4
 set showcmd
@@ -33,9 +34,16 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-vinegar'
+Plugin 'cespare/vim-toml'
+Plugin 'calviken/vim-gdscript3'
 call vundle#end()
-
-map <C-n> :Explore<CR>
+" map <C-n> :Explore<CR>
 colorscheme dracula
 filetype plugin indent on
+" let g:netrw_winsize=15
+" autocmd VimEnter * Lex | execute "wincmd l" | term bash
+" autocmd VimEnter * execute "wincmd r"
+" autocmd VimEnter * resize 6
+command JsonFormat :%!python -m json.tool
 hi Normal guibg=NONE ctermbg=NONE

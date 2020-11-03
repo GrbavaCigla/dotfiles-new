@@ -27,10 +27,11 @@ fi
 
 ~/.fehbg &
 unclutter &
-parcelite &
+parcellite &
 picom &
 dwmblocks &
 wal -R &
 dunst &
 redshift &
+xss-lock slock &
 exec dwm

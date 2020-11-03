@@ -1,4 +1,4 @@
-
+#!/bin/sh
 
 if test -n "$SSH_TTY";then
 	_PS1="\[\e[0;1;91m\]\u\[\e[0;97m\]@\[\e[0;93m\]\H\[\e[m\] \[\e0"
@@ -16,6 +16,9 @@ export HISTFILE="/home/$USER/.history/.bash"
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
 export EDITOR=vim
+export VISUAL=vim
+export CLICOLOR=1
+export TERM=alacritty
 
 shopt -s autocd
 
