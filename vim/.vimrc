@@ -16,7 +16,7 @@ set lazyredraw
 set magic
 set nocompatible
 set nowrap
-set relativenumber
+set number relativenumber
 set ruler
 set shiftwidth=4
 set showcmd
