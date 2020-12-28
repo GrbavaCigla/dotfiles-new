@@ -37,6 +37,8 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-vinegar'
 Plugin 'cespare/vim-toml'
 Plugin 'calviken/vim-gdscript3'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 " map <C-n> :Explore<CR>
 colorscheme dracula

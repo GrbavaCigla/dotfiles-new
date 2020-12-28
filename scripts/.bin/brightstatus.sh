@@ -2,4 +2,4 @@
 CMD=$(brightnessctl g)
 MAX=$(brightnessctl m)
 
-echo "$(bc -l <<< "scale=4; ${CMD}/${MAX}*100" | awk '{print int($1+0.5)}')%"
+echo "$(echo "scale=4; ${CMD}/${MAX}*100" | bc | awk '{print int($1+0.5)}')%"

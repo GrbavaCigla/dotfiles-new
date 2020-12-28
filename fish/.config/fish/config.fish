@@ -1,4 +1,5 @@
 set -x GPG_TTY (tty)
+source $HOME/.cargo/env
 
 alias hcat "pygmentize -g"
 alias ls "exa --color=always -F"
